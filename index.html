@@ -11,11 +11,17 @@
       <form ng-submit="postMessage(message)">
         <input class="form-control text-box" type="text" ng-model="message" placeholder="Message">
       </form>
+       <div class="filter">
+          Filter: <input type="text" ng-model="filterMessage">
+        </div>
+
+
       <div class="messages-container">
-        <p ng-repeat="message in messages ">
-          {{message.message}} </p>
+        <p ng-repeat="message in messages | filter: filterMessage | orderBy: '-createdAt'">
+          {{message.message}} <br/> {{message.createdAt}}</p>
       </div>
     </div>
+
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
     <script src="js/app.js"></script>

@@ -15,10 +15,16 @@ body {
   background: rgba(255, 255, 255, 0.86);
   padding: 5px;
   border-radius: 10px;
+  position: relative;
 }
 
 .main-container h1 {
   text-align: center;
+  height: 5vh;
+  width: 100%;
+  background: lightcoral;
+  color: white;
+  
 }
 
 .text-box {
@@ -26,8 +32,27 @@ body {
   width: 40%;
 }
 
-p{
+p {
+ 
+ background: slategrey;
+ color: white;
   text-align: center;
-  margin: 3px 0;
+  padding: 5px 5px;
+  margin: 5px 10px;
   font-size: 17px;
+  border: 2px solid gray;
+  
+}
+
+#messages-container{
+  position: relative;
+
+}
+
+
+
+#filter{
+  position: absolute;
+  top: 20%;
+  left: 5%;
 }
